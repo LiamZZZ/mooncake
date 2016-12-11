@@ -8,8 +8,8 @@ const Index = () => (
       <p>临时导航列表：</p>
       <ListGroup>
         <ListGroupItem href="/units">所有主题</ListGroupItem>
-        <ListGroupItem href="/units/colors">主题 - 颜色</ListGroupItem>
-        <ListGroupItem href="/units/articles">所有文章</ListGroupItem>
+        <ListGroupItem href="/videos">视频</ListGroupItem>
+        <ListGroupItem href="/articles">所有文章</ListGroupItem>
       </ListGroup>
       <p style={ { fontSize: '16px', color: '#aaa' } }>小月饼 儿童英语 2016</p>
     </Jumbotron>

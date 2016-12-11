@@ -13,9 +13,9 @@ const ShowUnits = () => (
             <Button href="#">推荐顺序</Button>
           </ButtonGroup>
         </div>
-        <UnitsList />
       </Col>
     </Row>
+    <UnitsList />
   </div>
 );
 

@@ -57,6 +57,14 @@ const composer = (props, onData) => {
         },
       ],
     };
+    /*
+      Meteor.publish('units.study', (linkedBy) => {
+        check(linkedBy, string);
+        return Units.findOne({linkedBy}});
+      });
+      const subcription = Meteor.subscribe('units.study');
+      const unit = Units.findOne();
+    */
     const data = { unit };
     onData(null, data);
   }, 1000);

@@ -5,19 +5,24 @@ import { render } from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import { Meteor } from 'meteor/meteor';
 import App from '../../ui/layouts/App.js';
-import Index from '../../ui/pages/Index.js';
 import NotFound from '../../ui/pages/NotFound.js';
-import UnitStudy from '../../ui/containers/UnitStudy.js';
-import ShowUnits from '../../ui/pages/ShowUnits.js';
 
+import UnitStudy from '../../ui/containers/UnitStudy.js';
+import TestVideo from '../../ui/pages/TestVideo.js';
+
+import Index from '../../ui/pages/Index.js';
+import Units from '../../ui/pages/Units.js';
+import Articles from '../../ui/pages/Articles.js';
 
 Meteor.startup(() => {
   render(
     <Router history={ browserHistory }>
       <Route path="/" component={ App }>
         <IndexRoute name="index" component={ Index } />
-        <Route name="showUnits" path="/units" component={ ShowUnits } />
-        <Route name="unitStudy" path="/units/:theme" component={ UnitStudy } />
+        <Route name="units" path="/units" component={ Units } />
+        <Route name="unitStudy" path="/units/:unit" component={ UnitStudy } />
+        <Route name="articles" path="/articles" component={ Articles } />
+        <Route name="testVideo" path="/videos" component={ TestVideo } />
         <Route path="*" component={ NotFound } />
       </Route>
     </Router>,

@@ -15,8 +15,12 @@ export default class ImageSlide extends React.Component {
         };
       );
     */
+    /*
+      添加触控滑动的事件，完善移动端的体验
+    */
+
     const bgImage = {
-      backgroundImage: 'url(/' + this.props.image + ')',
+      backgroundImage: `url(/${this.props.image})`,
     };
     const warningMsg = 'No more pictures 😅';
     if (this.props.onPop) Bert.alert(warningMsg, 'warning');

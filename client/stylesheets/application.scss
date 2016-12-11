@@ -9,6 +9,17 @@
 
 @import "state/Navbar";
 
+a:hover {
+  text-decoration: none !important;
+}
+.lmc-desc {
+  line-height: 1.2em;
+  height: 1.2em;
+  color: #aaa;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .lmc-loading {
   display: inline-block;
   overflow: hidden;
