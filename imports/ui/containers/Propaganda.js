@@ -2,7 +2,7 @@ import { compose } from 'react-komposer';
 // import { Meteor } from 'meteor/meteor';
 import Loading from '../components/Loading.js';
 
-// import UnitsList from '../components/UnitsList.js';
+import Propaganda from '../components/Propaganda.js';
 
 
 const composer = (props, onData) => {
@@ -16,9 +16,9 @@ const composer = (props, onData) => {
       const propaganda = Propagandas.findOne();
     */
     const propaganda = {
-      image: '',
-      link: '',
-      type: 'units',
+      image: 'poster.jpg',
+      link: 'http://weibo.com',
+      type: 'article',
       top: true,
       timestamp: '',
     };
@@ -30,4 +30,4 @@ const options = {
   loadingHandler: Loading,
 };
 
-export default compose(composer, options)();
+export default compose(composer, options)(Propaganda);

@@ -1,6 +1,7 @@
 import React from 'react';
 import { DropdownButton, MenuItem } from 'react-bootstrap';
 import ArticlesList from '../containers/ArticlesList.js';
+import Propaganda from '../containers/Propaganda.js';
 
 export default class Articles extends React.Component {
   constructor(props) {
@@ -12,6 +13,7 @@ export default class Articles extends React.Component {
   render() {
     return (
       <div className="Units">
+        <Propaganda type="article"/>
         <div className="page-header clearfix">
           <h4 className="pull-left  ">全部文章</h4>
           <div className="pull-right">

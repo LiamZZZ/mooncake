@@ -7,7 +7,7 @@ export default class ArticlesList extends React.Component {
       <div>
         {articles.map(({ title, author, time, cate, link }) => (
           <blockquote key={time}>
-            <a href={link} target="_blank">
+            <a href={link} target="_blank" className="lmc-inline">
               <p><Label>{cate}</Label>&emsp;&emsp;{title}</p>
               <footer>{author}&emsp;&emsp;<cite title="Time">{time}</cite></footer>
             </a>
