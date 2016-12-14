@@ -8,55 +8,6 @@ import UnitStudy from '../pages/UnitStudy.js';
 const composer = (props, onData) => {
   // 模拟数据，并设置延时，加载loading
   setTimeout(() => {
-    const unit = {
-      themeCN: '颜色',
-      themeEN: 'Colors',
-      words: [
-        {
-          _id: 'word1',
-          word: 'red',
-          meaning: 'n. 红色',
-          label: 'red',
-          image: 'Places-hospital.svg',
-          thumb: 'hospital-thumb.png',
-          audio: 'redd.WAV',
-        },
-        {
-          _id: 'word2',
-          word: 'blue',
-          meaning: 'n. 蓝色',
-          label: 'blue',
-          image: 'Places-park.svg',
-          thumb: 'hospital-thumb.png',
-          audio: 'blue.WAV',
-        },
-        {
-          _id: 'word3',
-          word: 'yellow',
-          meaning: 'n. 黄色',
-          label: 'yellow',
-          image: 'Places-school.svg',
-          thumb: 'hospital-thumb.png',
-          audio: 'yellow.WAV',
-        },
-      ],
-      sentences: [
-        {
-          _id: 'sentence1',
-          sentence: 'What color is it?',
-          meaning: '这是什么颜色？',
-          label: 'what-color-is-it',
-          audio: 'red.WAV',
-        },
-        {
-          _id: 'sentence2',
-          sentence: 'It is ...',
-          meaning: '这是 ...',
-          label: 'it-is',
-          audio: 'redd.WAV',
-        },
-      ],
-    };
     /*
       Meteor.publish('units.study', (linkedBy) => {
         check(linkedBy, string);
@@ -65,6 +16,61 @@ const composer = (props, onData) => {
       const subcription = Meteor.subscribe('units.study');
       const unit = Units.findOne();
     */
+    const unit = {
+      titleCN: '颜色',
+      titleEN: 'Colors',
+      linkedBy: 'colors',
+      release: true,
+      words: [
+        {
+          word: 'red',
+          meaning: 'n. 红色',
+          image: 'Places-hospital.svg',
+          thumb: 'hospital-thumb.png',
+          voice: 'redd.WAV',
+        },
+        {
+          word: 'blue',
+          meaning: 'n. 蓝色',
+          image: 'Places-park.svg',
+          thumb: 'hospital-thumb.png',
+          voice: 'blue.WAV',
+        },
+        {
+          _id: 'word3',
+          word: 'yellow',
+          meaning: 'n. 黄色',
+          label: 'yellow',
+          image: 'Places-school.svg',
+          thumb: 'hospital-thumb.png',
+          voice: 'yellow.WAV',
+        },
+      ],
+      sentences: [
+        {
+          sentence: 'What color is it?',
+          meaning: '这是什么颜色？',
+          voice: 'red.WAV',
+        },
+        {
+          sentence: 'It is ...',
+          meaning: '这是 ...',
+          voice: 'blue.WAV',
+        },
+      ],
+      signlangs: [
+        {
+          lang: 'apple',
+          demo: 'quiz4.mp4',
+          thumb: 'hospital-thumb.png',
+        },
+        {
+          lang: 'banana',
+          demo: 'lesson3.mp4',
+          thumb: 'hospital-thumb.png',
+        },
+      ],
+    };
     const data = { unit };
     onData(null, data);
   }, 1000);

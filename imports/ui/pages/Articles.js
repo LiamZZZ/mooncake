@@ -12,7 +12,7 @@ export default class Articles extends React.Component {
   }
   render() {
     return (
-      <div className="Units">
+      <div className="Articles">
         <Propaganda type="article"/>
         <div className="page-header clearfix">
           <h4 className="pull-left  ">全部文章</h4>

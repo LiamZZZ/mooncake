@@ -1,5 +1,5 @@
 import React from 'react';
-import { Alert, Row, Col, Thumbnail } from 'react-bootstrap';
+import { Thumbnail } from 'react-bootstrap';
 
 export default class Propaganda extends React.Component {
   renderIndexPropaganda(propaganda) {
@@ -9,6 +9,7 @@ export default class Propaganda extends React.Component {
         alt={propaganda.image}
         src={`/${propaganda.image}`}
         style={{ width: '100%' }}
+        className="lmc-propaganda"
         target="_blank"
       />
     );
@@ -20,7 +21,7 @@ export default class Propaganda extends React.Component {
         alt={propaganda.image}
         src={`/${propaganda.image}`}
         style={{ width: '50%' }}
-        className="center-block"
+        className="center-block lmc-propaganda"
         target="_blank"
       />
     );

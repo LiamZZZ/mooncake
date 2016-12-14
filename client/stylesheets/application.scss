@@ -12,6 +12,61 @@
 a:hover {
   text-decoration: none !important;
 }
+.lmc-image-list {
+  width: 50%;
+  position: relative;
+}
+@media screen and (min-width: 760px) {
+  .lmc-image-list {
+    width: 33.33%;
+  }
+}
+.lmc-cover {
+  background-color: rgba(0,0,0,.4);
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 2em;
+}
+.lmc-hover-item {
+  cursor: pointer;
+  transition: box-shadow .5s;
+}
+.lmc-hover-item:hover {
+  box-shadow: 1px 2px 3px rgba(0,0,0,.2);
+}
+.lmc-padding-md {
+  padding: .5em 1em !important;
+}
+.lmc-hover-word:hover {
+  color: #337ab7;
+}
+.lmc-hover-image {
+  transition: transform .5s;
+  cursor: pointer;
+}
+.lmc-hover-image:hover {
+
+}
+.lmc-dot-bullet {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: #777;
+  margin-right: 2em;
+}
+.lmc-propaganda {
+    margin-right: 40px;
+  }
+@media screen and (max-width: 768px) {
+  .lmc-propaganda {
+    display: none !important;
+  }
+}
+.lmc-flex-container {
+  display: flex;
+}
 .lmc-inline {
   display: inline-block;
 }
@@ -48,7 +103,7 @@ a:hover {
 @keyframes spin7  { to { transform: translateY(-10.5em); } }
 
 .lmc-hide {
-  transition: opacity .5s;
+
   visibility: hidden;
   opacity: 0;
 }
@@ -57,10 +112,8 @@ a:hover {
   width: 100%;
 }
 .lmc-header {
-  font-size: 32px;
+  font-size: 1.2em;
   font-weight: bold;
-  letter-spacing: 4px;
-  padding-left: 16px;
 }
 .lmc-subheader {
   font-size: 16px;
@@ -103,9 +156,6 @@ a:hover {
 }
 .modal-footer {
   border-width: 0 !important;
-}
-.lmc-row {
-  margin-bottom: 8px;
 }
 .lmc-center {
   position: absolute;
